@@ -1,10 +1,18 @@
+number1 = 0
+number2 = 0
 while True:
-    number1 = int(input('input first number:'))
-    if number1 != 0:
+    while number1 == 0:
+        number1 = int(input('input first number:'))
+    while number2 == 0:
         number2 = int(input('input second number:'))
-        while number2 != 0:
-            if number1 > number2:
-                print('Bigger')
-            else:
-                print('Second number was bigger than first')
-                break
+    if number1 > number2:
+        print('Bigger')
+        number1 = 0
+        number2 = 0
+    else:
+        print('Second number was bigger than first')
+        break
+
+
+
+
